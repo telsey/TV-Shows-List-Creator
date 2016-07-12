@@ -1,0 +1,9 @@
+E:\Stuf\C++\Text Generator\Text Generator\bin\Debug\Text Generator.exe.config
+E:\Stuf\C++\Text Generator\Text Generator\bin\Debug\Text Generator.exe
+E:\Stuf\C++\Text Generator\Text Generator\bin\Debug\Text Generator.pdb
+E:\Stuf\C++\Text Generator\Text Generator\obj\Debug\Text Generator.csprojResolveAssemblyReference.cache
+E:\Stuf\C++\Text Generator\Text Generator\obj\Debug\Text_Generator.Form1.resources
+E:\Stuf\C++\Text Generator\Text Generator\obj\Debug\Text_Generator.Properties.Resources.resources
+E:\Stuf\C++\Text Generator\Text Generator\obj\Debug\Text Generator.csproj.GenerateResource.Cache
+E:\Stuf\C++\Text Generator\Text Generator\obj\Debug\Text Generator.exe
+E:\Stuf\C++\Text Generator\Text Generator\obj\Debug\Text Generator.pdb
