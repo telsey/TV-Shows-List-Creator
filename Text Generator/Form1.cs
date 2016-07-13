@@ -37,7 +37,7 @@ namespace Text_Generator
             string a;
             string sez;
             string epi;
-            StreamWriter File = new StreamWriter("List.txt");  //Name of txt file or destination
+            StreamWriter File = new StreamWriter("List.txt");  //Name of txt file or destination ("C://***/List.txt")
 
             for (int i=1;i<=season;i++)
             {
@@ -64,28 +64,26 @@ namespace Text_Generator
         }
 
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)//Only numbers in TextBox 
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)//Only numbers in TextBox  + backspace
         {
-            e.Handled = !char.IsDigit(e.KeyChar);
+            if (Char.IsDigit(e.KeyChar))
+                return;
+            if (char.IsControl(e.KeyChar))
+                return;
+            e.Handled = true;
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)//Only numbers in TextBox 
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)//Only numbers in TextBox + backspace 
         {
-            e.Handled = !char.IsDigit(e.KeyChar);
+            if (Char.IsDigit(e.KeyChar))
+                return;
+            if (char.IsControl(e.KeyChar))
+                return;
+            e.Handled = true;
         }
 
-        //_________________________________________________________________________________________________________
-        ///___________PITANJE?????????????
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
-                button1.Enabled = false;
-            else
-                button1.Enabled = true;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e) //TextBox1 check if empty
         {
             if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
                 button1.Enabled = false;
@@ -93,7 +91,15 @@ namespace Text_Generator
                 button1.Enabled = true;
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e) //TextBox2 check if empty
+        {
+            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
+                button1.Enabled = false;
+            else
+                button1.Enabled = true;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e) //TextBox3 check if empty
         {
             if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) || string.IsNullOrEmpty(textBox3.Text))
                 button1.Enabled = false;
